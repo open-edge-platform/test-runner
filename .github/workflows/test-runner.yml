@@ -1,4 +1,4 @@
-name: test-aks-arc-runner-burst
+name: test-runner-burst
 
 on:
   workflow_dispatch:
