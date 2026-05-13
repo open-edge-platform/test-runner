@@ -1,0 +1,19 @@
+name: test-aks-arc-runner-burst
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        n: [1, 2, 3, 4, 5]
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "runner test ${{ matrix.n }}"
+          hostname
+          date
+          cat /etc/os-release
+          sleep 60
